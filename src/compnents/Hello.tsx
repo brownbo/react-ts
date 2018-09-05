@@ -10,7 +10,7 @@ export interface IProps {
   
 class Hello extends React.Component<IProps, object> {
     public  render() {
-      const { name, enthusiasmLevel = 1,onIncrement,onDecrement } = this.props;
+      const { enthusiasmLevel = 1,onIncrement,onDecrement } = this.props;
   
       if (enthusiasmLevel <= 0) {
         throw new Error('You could be a little more enthusiastic. :D');
@@ -19,7 +19,7 @@ class Hello extends React.Component<IProps, object> {
       return (
         <div className="hello">
           <div className="greeting">
-            Hello {name + getExclamationMarks(enthusiasmLevel)}
+            Hello { getExclamationMarks(enthusiasmLevel)}
           </div>
           <div>
         <button onClick={onDecrement}>-</button>

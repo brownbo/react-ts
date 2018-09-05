@@ -1,9 +1,9 @@
 import Hello from '../compnents/Hello';
-import * as actions from '../actions/';
-import { StoreState } from '../types/index';
-import { connect, Dispatch } from 'react-redux';
-
-export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
+import * as actions from '../actions/index';
+import { IStoreState } from '../types/index';
+import { connect } from 'react-redux';
+import {Dispatch} from 'redux'
+export function mapStateToProps({ enthusiasmLevel, languageName }: IStoreState) {
   return {
     enthusiasmLevel,
     name: languageName,
